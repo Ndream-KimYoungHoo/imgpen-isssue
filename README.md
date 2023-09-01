@@ -47,6 +47,8 @@ The basis for this suspicion lies in the difference between the following two sc
 6. Edit Image and Save
 7. It can be confirmed that the edited results are reflected correctly
 
+When considering the two previous scenarios together, it is suspected that the root cause of the issue lies within imgpen.js
+
 ## Environment Details
 - Window 11 Pro
 - Chrome 
