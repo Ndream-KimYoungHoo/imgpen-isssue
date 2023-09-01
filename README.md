@@ -4,7 +4,7 @@
 3. `yarn start` in the root 
 
 ## Issue Scenario (GIF)
-![imgpen_issue](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/35acb1cd-e2e1-4e69-97c1-1f2b9d774517)
+<img src="https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/35acb1cd-e2e1-4e69-97c1-1f2b9d774517" width= "480px" height= "400px" />
 
 ## Description of the Issue
 1. Click toggle editor button
@@ -57,6 +57,7 @@ The reason for these modifications is as follows:
 ![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/414502a9-68ba-416c-8736-278cc4b03127)
 
 ![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/4d322e4f-c60f-436e-9e06-895f5da74dfa)
+
 You can also find the modified content in the TXT file located in the patches folder within the CKEditor directory
 
 ## Figure List
