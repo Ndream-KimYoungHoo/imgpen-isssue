@@ -23,7 +23,9 @@ The edited image from step 7 should be reflected.
 ### Suspicious Points
 
 I am suspicious of the following imgpen.js code received through the network.
+
 ![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/1c23f50f-3f29-4be7-bbca-bfda28f73d69)
+
 The basis for this suspicion lies in the difference between the following two scenarios.
 
 let's consider the first scenario.
