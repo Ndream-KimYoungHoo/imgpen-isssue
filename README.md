@@ -47,11 +47,11 @@ The basis for this suspicion lies in the difference between the following two sc
 6. Edit Image and Save
 7. It can be confirmed that the edited results are reflected correctly
 
-### Environment Details
+## Environment Details
 - Window 11 Pro
 - Chrome 
 
-### Additional Notes
+## Additional Notes
 I have made some modifications to the internal code of imgpencommand.js within the @edsdk/flmngr-ckeditor5 package located in the CKEditor folder. 
 The reason for these modifications is as follows:
 ![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/414502a9-68ba-416c-8736-278cc4b03127)
@@ -59,4 +59,4 @@ The reason for these modifications is as follows:
 ![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/4d322e4f-c60f-436e-9e06-895f5da74dfa)
 You can also find the modified content in the TXT file located in the patches folder within the CKEditor directory
 
-### Figure List
+## Figure List
