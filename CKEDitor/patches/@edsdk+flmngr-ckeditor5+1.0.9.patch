@@ -1,0 +1,113 @@
+diff --git a/node_modules/@edsdk/flmngr-ckeditor5/src/imgpencommand.js b/node_modules/@edsdk/flmngr-ckeditor5/src/imgpencommand.js
+index 473c16f..3225708 100644
+--- a/node_modules/@edsdk/flmngr-ckeditor5/src/imgpencommand.js
++++ b/node_modules/@edsdk/flmngr-ckeditor5/src/imgpencommand.js
+@@ -35,21 +35,59 @@ export default class ImgPenCommand extends Command {
+ 			return;
+ 		}
+ 
+-		const elImg = this.getSelectedImage();
+-
+-		ImgPenCommand.flmngr.editImageAndUpload({
+-			url: elImg.getAttribute("src"),
+-			onSave: (newUrl) => {
+-				this.changeImgSrc(elImg, ImgPenCommand.flmngr.getNoCacheUrl(newUrl));
+-			},
+-			onFail: (error) => {
+-				const notification = editor.plugins.get( 'Notification' );
+-				const t = editor.locale.t;
+-				notification.showWarning(error, {
+-					title: t( 'Uploading edited image to server failed' ),
+-					namespace: 'flmngr'
+-				} );
+-			}
++		
++		// Original Code ------------------------------------------------------------
++		// Reason for changing the code 
++		// editImageAndUpload method require image name has extension but our image src doesnt have extension
++		// Also editImageAndUpload show unwanted confirm modal shown in figure 1
++		// So made the changes to the code as suggested by imgpen. in https://flmngr.com/doc/custom-edit-image
++
++		// const elImg = this.getSelectedImage();
++
++		// ImgPenCommand.flmngr.editImageAndUpload({
++		// 	url: elImg.getAttribute("src"),
++		// 	onSave: (newUrl) => {
++		// 		this.changeImgSrc(elImg, ImgPenCommand.flmngr.getNoCacheUrl(newUrl));
++		// 	},
++		// 	onFail: (error) => {
++		// 		const notification = editor.plugins.get( 'Notification' );
++		// 		const t = editor.locale.t;
++		// 		notification.showWarning(error, {
++		// 			title: t( 'Uploading edited image to server failed' ),
++		// 			namespace: 'flmngr'
++		// 		} );
++		// 	}
++		// });
++		// --------------------------------------------------------------------------
++
++		this.editor.getFlmngr((Flmngr) => {
++			Flmngr.edit({
++				url: document.querySelector('.ck-widget_selected').querySelector('img').src,
++				onSave: (onExport, onClose) => {
++					onExport(
++						document.querySelector('.ck-widget_selected').querySelector('img').src,
++						'jpg',
++						95,
++						async (imageBlob) => {
++						const body = new FormData();
++						body.append('upload', imageBlob);
++
++						fetch(`https://api-qa.naranggo.com/uploadImage`, {
++							method: 'POST',
++							body
++						})
++						.then(async (res) => await res.json())
++						.then((res) => {
++							this.changeImgSrc(this.getSelectedImage(), ImgPenCommand.flmngr.getNoCacheUrl(res.url));
++						});
++
++						onClose();
++					});
++				},
++				onFail: function (error) {	
++					alert(error);
++				}
++			});
+ 		});
+ 	}
+ 
+@@ -59,12 +97,27 @@ export default class ImgPenCommand extends Command {
+ 			writer.removeAttribute("srcset", el);
+ 			writer.removeAttribute("sizes", el);
+ 
+-			let attr = el.getAttribute("htmlAttributes");
+-			if (attr) {
+-				delete attr.attributes.src;
+-				delete attr.attributes.srcset;
+-				delete attr.attributes.sizes;
+-				writer.setAttribute("htmlAttributes", attr, el);
++			// Original Code -----------------------------------
++			// Reason for changing the code 
++			// When i try to edit image again, figure 2 error appears
++			// let attr = el.getAttribute("htmlAttributes");
++			// if (attr) {
++			// 	delete attr.attributes.src;
++			// 	delete attr.attributes.srcset;
++			// 	delete attr.attributes.sizes;
++			// 	writer.setAttribute("htmlAttributes", attr, el);
++			// }
++			// -------------------------------------------------
++
++			// Changed Code -----
++			if ('getAttribute' in el) {
++				let attr = el.getAttribute("htmlAttributes");
++				if (attr) {
++					delete attr.attributes.src;
++					delete attr.attributes.srcset;
++					delete attr.attributes.sizes;
++					writer.setAttribute("htmlAttributes", attr, el);
++				}
+ 			}
+ 		});
+ 
