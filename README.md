@@ -1,12 +1,12 @@
-### Setup Step
+## Setup Step
 1. Clone the repo
 2. `yarn install` in the root and `yarn install` and `yarn build` in CKEDitor folder
 3. `yarn start` in the root 
 
-### Issue Scenario (GIF)
+## Issue Scenario (GIF)
 ![imgpen_issue](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/35acb1cd-e2e1-4e69-97c1-1f2b9d774517)
 
-### Description of the Issue
+## Description of the Issue
 1. Click toggle editor button
 2. Upload some images
 3. Edit Image and Save
@@ -17,10 +17,10 @@
 
 The mentioned steps abstract the UX of projects utilizing actual imgpen and ckeditor. Similarly, the code written in this repository also abstracts the code of the projects it is used for.
 
-### Desired Outcome
+## Desired Outcome
 The edited image from step 7 should be reflected.
 
-### Suspicious Points
+## Suspicious Points
 
 I am suspicious of the following imgpen.js code received through the network.
 
@@ -28,7 +28,7 @@ I am suspicious of the following imgpen.js code received through the network.
 
 The basis for this suspicion lies in the difference between the following two scenarios.
 
-let's consider the first scenario.
+### First Scenario
 1. Click toggle editor button
 2. Upload some images
 3. Edit Image and **Cancle**
@@ -38,7 +38,7 @@ let's consider the first scenario.
 6. Edit again image and try Save
 7. (❌ Problem here) There is an issue where the edited results are not being reflected
 
-And then the second scenario.
+### Second Scenario
 1. Click toggle editor button
 2. Upload some images
 3. Click toggle editor button again to hide editor
