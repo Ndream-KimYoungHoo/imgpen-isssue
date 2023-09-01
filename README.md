@@ -63,5 +63,3 @@ The reason for these modifications is as follows:
 ![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/414502a9-68ba-416c-8736-278cc4b03127)
 
 You can also find the modified content in the TXT file located in the patches folder within the CKEditor directory
-
-## Figure List
