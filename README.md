@@ -4,7 +4,7 @@
 3. `yarn start` in the root 
 
 ## Issue Scenario (GIF)
-![imgpen_issue](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/35acb1cd-e2e1-4e69-97c1-1f2b9d774517)
+<img src="https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/35acb1cd-e2e1-4e69-97c1-1f2b9d774517" width= "480px" height= "400px" />
 
 ## Description of the Issue
 1. Click toggle editor button
@@ -39,6 +39,8 @@ The basis for this suspicion lies in the difference between the following two sc
 7. (❌ Problem here) There is an issue where the edited results are not being reflected
 
 ### Second Scenario
+<img src="https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/5e637dd5-840b-44ef-93a9-8772ff157068" width="480px" height="400px"/>
+
 1. Click toggle editor button
 2. Upload some images
 3. Click toggle editor button again to hide editor
@@ -46,6 +48,8 @@ The basis for this suspicion lies in the difference between the following two sc
 5. Click toggle editor button again to show editor
 6. Edit Image and Save
 7. It can be confirmed that the edited results are reflected correctly
+
+When considering the two previous scenarios together, it is suspected that the root cause of the issue lies within imgpen.js
 
 ## Environment Details
 - Window 11 Pro
@@ -57,6 +61,7 @@ The reason for these modifications is as follows:
 ![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/414502a9-68ba-416c-8736-278cc4b03127)
 
 ![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/4d322e4f-c60f-436e-9e06-895f5da74dfa)
+
 You can also find the modified content in the TXT file located in the patches folder within the CKEditor directory
 
 ## Figure List
