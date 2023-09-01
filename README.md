@@ -60,6 +60,6 @@ When considering the two previous scenarios together, it is suspected that the r
 ## Additional Notes
 I have made some modifications to the internal code of imgpencommand.js within the @edsdk/flmngr-ckeditor5 package located in the CKEditor folder. 
 The reason for these modifications is as follows:
-![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/414502a9-68ba-416c-8736-278cc4b03127)
+![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/13df3fa8-1470-48ef-b87a-256fd6eb2e18)
 
 You can also find the modified content in the TXT file located in the patches folder within the CKEditor directory
