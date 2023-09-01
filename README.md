@@ -29,6 +29,8 @@ I am suspicious of the following imgpen.js code received through the network.
 The basis for this suspicion lies in the difference between the following two scenarios.
 
 ### First Scenario
+<img src="https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/e5e40931-1e85-4fcc-994d-6ed9cc5d3fb2" width="480px" height="400px"/>
+
 1. Click toggle editor button
 2. Upload some images
 3. Edit Image and **Cancle**
@@ -59,8 +61,6 @@ When considering the two previous scenarios together, it is suspected that the r
 I have made some modifications to the internal code of imgpencommand.js within the @edsdk/flmngr-ckeditor5 package located in the CKEditor folder. 
 The reason for these modifications is as follows:
 ![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/414502a9-68ba-416c-8736-278cc4b03127)
-
-![image](https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/4d322e4f-c60f-436e-9e06-895f5da74dfa)
 
 You can also find the modified content in the TXT file located in the patches folder within the CKEditor directory
 
