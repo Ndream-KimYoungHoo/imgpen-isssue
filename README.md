@@ -40,6 +40,8 @@ The basis for this suspicion lies in the difference between the following two sc
 6. Edit again image and Save
 7. (❌ Problem here) There is an issue where the edited results are not being reflected
 
+🤔 Just to note, the issue persists even after applying the 'imgpen' key following payment
+
 ### Second Scenario
 <img src="https://github.com/Ndream-KimYoungHoo/imgpen-isssue/assets/107921227/5e637dd5-840b-44ef-93a9-8772ff157068" width="480px" height="400px"/>
 
